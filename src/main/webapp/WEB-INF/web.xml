@@ -7,6 +7,15 @@
 	<display-name>demo-spring-mvc</display-name>
 	<description>Demo Spring MVC application</description>
 
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath:edu/iu/es/sit/spring-beans.xml</param-value>
+	</context-param>
+
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+
 	<servlet>
 		<servlet-name>mvc</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
@@ -17,5 +26,5 @@
 		<servlet-name>mvc</servlet-name>
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
-	
+
 </web-app>
